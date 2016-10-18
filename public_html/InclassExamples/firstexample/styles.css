@@ -1,0 +1,19 @@
+/* 
+	COMP.4610: in class example
+	Jonathan Wydola. Umass Lowell Undergraduate. Jonathan_Wydola@student.uml.edu
+	Affiliation: Umass Lowell GUI 91.61
+	Date Created: 9/13/2016
+	Copyright (c) by Jonathan Wydola. All rights reserved. May be freely copied or excerted for educational purposes with credit to the author.
+	Updated by Jonathan Wydola on September 8, 2016 at 11:17 AM. 
+	this file contains all information used for the styling of my index.html
+*/
+
+/*this is the second styles sheet I used */
+article::first-letter{
+font-weight: bold;
+font-style: italic;
+}
+body{
+	text-wrap: normal;
+	border-right-width: medium;
+}

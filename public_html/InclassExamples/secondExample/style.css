@@ -1,0 +1,77 @@
+/*Jonathan Wydola
+Inclass exercise 2
+September 29, 2016
+*/
+
+/*given by the inclass handout*/
+body{
+	font-size: 80%;
+	font-family: "Courier New", Courier, monospace;
+	letter-spacing: 0.15em;
+	background-color: #efefef;
+
+}
+/*sets the page to a min max width and auto margin
+to format in the center of the page, wraps a box and aligns
+the content to the center*/
+#page{
+	max-width: 950px;
+	min-width: 720px;
+	margin: 10px auto 10px auto;
+	padding: 20px;
+	border: 4px double blue;
+	background-color:#ffffff;
+	text-align: center;
+}
+/*sets the spacing to the logo*/
+#page #logo{
+	margin: 10px auto 25px auto;
+	
+}
+
+/*sets the width to the images, creates borders on the top and bottom
+of the nav bar. stips the list style, aligns to the center.*/
+#navigation{
+	width: 570px;
+	border-top: 2.5px solid black;
+	border-bottom: 2px solid black;
+	padding: 15px;
+	margin: 0px auto 0px auto;
+	list-style-type: none;
+	text-align: center;
+}
+
+/*displays the list in line, spaces between links in list.*/
+#navigation li{
+	display: inline;
+	margin: 0px 3px;
+
+}
+
+
+/*aligns the text under the images under the nav bar
+sets the width to 600 like the instuctions and puts spacing at the
+top and bottom of the paragraph*/
+p{
+	/*i used 610 instead of 600. i acknowledge the instructions said 600
+	but this replicates the image provided better (as to where the actual wor
+	ds are).
+	*/
+	width: 610px;
+	margin: 20px auto 20px auto;
+	text-align: center;
+}
+
+/*changes link color, changes to uppercase letter and, padding for seperation*/
+a{
+	color: #000000;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 6px 18px 5px 18px;
+}
+/*for effects when hovering and for the changing of color for the webpage that is selected
+or on*/
+a:hover, a.on{
+	color: #cc3333;
+	background-color: #ffffff;
+}
