@@ -1,0 +1,89 @@
+/* file: /usr/cs/undergrad/2015/jwydola/public_html/styles.css
+	COMP.4610: Assignment 2
+	Jonathan Wydola. Umass Lowell Undergraduate. Jonathan_Wydola@student.uml.edu
+	Affiliation: Umass Lowell GUI 91.61
+	Date Created: 9/13/2016
+	Copyright (c) by Jonathan Wydola. All rights reserved. May be freely copied or excerted for educational purposes with credit to the author.
+	Updated by Jonathan Wydola on September 8, 2016 at 11:17 AM. 
+	this file contains all information used for the styling of my index.html
+*/
+
+/*flex container to scale contents of my page*/
+.flex-container {
+	display: -webkit-flex;
+	display:	flex;
+	-webkit-flex-flex:	row wrap;
+	flex-flow:	row wrap;
+	text-align:	center;
+}
+
+.flex-container > * {
+	padding:	10px;
+	-webkit-flex: 1	100%;
+	flex: 1 100%;
+}
+
+header{
+	padding:				1em;
+	margin-bottom:	2em;
+	clear: 					left;
+	text-align:			center;
+}
+
+
+nav{
+	float:			left;
+	max-width:	160px;
+	padding:		1em;
+}
+
+nav ul{
+	float:		left;
+	padding:	1;
+}
+
+/*access the content div class and modify this sub tags*/
+.content h2, h3{
+	overflow:			hidden;
+	text-align:   left;
+	align:				left;
+	margin-left:	160px;
+}
+.content h4{
+	text-align:	 center;
+	font-weight: bold;
+	padding: 0em;
+	margin-bottom: 0em;
+}
+
+.content p{
+	color:				red;
+	text-align:		left;
+	margin-left:	160px;
+}
+
+/*individualy style my ul tags to align with the page and eachother*/
+.languages ul{
+	float:				left;
+	margin-left:	140px;
+	padding-left: 30px;
+}
+.languages li{
+	padding: 			1.5px;
+}
+
+.employers ul{
+	position: 		realtive;
+	float: 				left;
+	margin-left:	20px;
+}
+
+.employers li{
+	padding:			1.5px;
+}
+
+/*format the footer*/
+footer {
+	margin-left:		10px;
+	text-align:			center;
+}

@@ -1,0 +1,129 @@
+/*
+file: pacific.css (from local machiene)
+Jonathan Wydola, University of Massachusetts Lowell Computer Science BA, jwydola
+Copyright (c) 2016 by Jonathan Wydola. All rights reserved. May be freely
+copied for educational purposes with credit to the author
+	updated September 22, 2016 10:47AM
+	
+	Note: when adding the telphone number, it seems to automatically underline it
+	and change the color to a link. The page loads with the proper color but then 
+	changes it.
+	
+	Note: passed the w3 validator
+*/ 
+/*sets the background-color to white
+	a gray font color and the background image to the one provided*/
+body {
+	background-color: #ffffff;
+	color: #666666;
+	font-family: Arial;
+	background-image: url(ptrbackground.jpg);
+}
+
+/* formats the header to be at the top of 
+the page with white color and the sunset image as the background*/
+h1{
+	color: #ffffff;
+	margin-bottom: 0;
+	background: #000033 url(sunset.jpg) top right no-repeat;
+	padding: 10px;
+}
+
+/*sets the naviagtion to the left hand side*/
+nav{
+	float:	left;
+	width: 160px;
+	padding: 20px 5px 20px 5px;
+	font-weight: bold;
+}
+
+/*keep the font size since it works. turn list type to none to remove bullet.
+removes the padding to align it more to the left*/
+nav ul {
+	/*removes the imge marker we will add later*/
+	list-style-type: none;
+	margin:	0px;
+	padding-left: 0px;
+	font-size: 1.2em;
+}
+
+nav a{
+	text-decoration: none;
+}
+/*provides a darker blue color for font*/
+nav a:link{
+	color: #000033;
+}
+/* to know which link is visited by changing color*/
+nav a:visited {
+	color: #344873;
+}
+/*white on hover*/
+nav a:hover {
+	color: #FFFFFF;
+}
+
+h2 {
+	color: #3399CC;
+	text-shadow: 1px 1px 1px #ccc;
+}
+h1,
+h2,
+footer {
+	font-family: Georgia, "Times New Roman", serif;
+}
+#contact {
+	font-size: 90%;
+}
+/*makes the title of the resort in the paragraph bold and 
+a new color*/
+.resort {
+	color: #5c7fa3;
+	font-weight: bold;
+}
+/*adds the marker to the ul tags*/
+ul {
+	list-style-image: url(marker.jpg);
+}
+
+/* all the contents of the page, wrapped a container*/
+#wrapper{
+	width: 80%;
+	min-width: 775px;
+	background: #90c7e3;
+	box-shadow: 5px 5px 5px #000033;
+}
+
+/*content of everything besides header and nav,
+ the general content of the page*/
+#content{
+	background: #ffffff;
+	padding: 10px 20px 20px 30px;
+	margin-left: 190px;
+}
+
+/*aligns the image to the left while creating space to the right
+to create a clean image wrapping*/
+#content  img{
+	float: left;
+	padding-right: 20px;
+}
+
+/*positions the list style markers inside the content flow,
+reults in extra indentation of marker*/
+#content ul{
+	list-style-position: inside;
+}
+
+/*commented out the font family and added the footer tag to the 
+(h1,h2,footer) tag defined above.
+also shrunk the size  and formatted the positioning*/
+footer {
+	font-style: italic;
+	/*font-family: Georgia, "Times New Roman", serif;*/
+	padding: 20px;
+	font-size: 75%;
+	margin-left: 190px;
+	background-color: #ffffff;
+}
+
