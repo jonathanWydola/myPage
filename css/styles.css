@@ -65,12 +65,13 @@ h2, h3, h4{
 	height:				150px;
 	border-top:			#be38ff;	
 	width:				100%;
+	margin:				15px 15px;
 }
 
 /*defines the height and margins for container*/
 .Morty{
 	height: 			120px;
-	margin:				0	40px;
+	margin:				10px	40px;
 }
 
 /*modify the image to the top left corner of container */
@@ -79,6 +80,7 @@ h2, h3, h4{
 	float:					left;
 	height:					120px;
 	width:					220px;
+	margin-right:			10px;
 	
 }
 
@@ -87,8 +89,9 @@ truely center my nav bar*/
 .main-nav{
 	width:				100%;
 	margin-top:			50px;
-	text-align:			center;
+	text-align:			left;
 	letter-spacing: 	.1em;
+	
 }
 
 /*centers the navagation unordered list*/
@@ -98,9 +101,13 @@ truely center my nav bar*/
 	display:			inline-block;
 	margin-top:			60px;
 	margin-right:  		10px;
+	margin-bottom:		60px;
 	
 }
 
+.main-nav ul{
+	margin-left:		100px;
+}
 /*centers the contents of the list items*/
 .main-nav ul li{
 	list-style-type:	none;
