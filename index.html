@@ -6,7 +6,7 @@
 	Affiliation: Umass Lowell GUI 91.61
 	Date Created: 9/13/2016
 	Copyright (c) by Jonathan Wydola. All rights reserved. May be freely copied or excerted for educational purposes with credit to the author.
-	Updated by Jonathan Wydola on October 5, 2016 at 12:32 AM.
+	Updated by Jonathan Wydola on October 18, 2016 at 4:22 pM.
 -->
 
 <!-- below are the links for my css sheet as well as my title -->
@@ -22,8 +22,8 @@
 	<body>
 		<div class="width-wrapper">
 			<header class="main-head">
-					<div class="Morty">
-						<img src="3f6.gif" alt="logo">
+				<div class="Morty">
+					<img src="3f6.gif" alt="logo">
 						<nav class="main-nav">
 							<ul>
 								<li><a href="#subAboutMe">About Me</a></li>
@@ -34,6 +34,7 @@
 							</ul>
 						</nav>
 					</div>
+				<a href="https://github.com/jonathanWydola/myPage/tree/gh-pages"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
 			</header>
 
 	<!-- navigation bar located at the left hand side, will be added to -->
@@ -53,6 +54,7 @@
 	-->
 			<div class="flex-container">
 			<div class="content">
+				<h1 id="timer"></h1>
 	<!-- this then starts to place items to the right starting with a description-->
 				<h2>About Me</h2>
 				<div id="subAboutMe">
@@ -66,9 +68,11 @@
 				<div class="assignments">
 					<h4 id="assignments">Assignments</h4>
 					<!-- just a bunch of text for each assignment so far-->
-							<span><a href="http://www.weblab.cs.uml.edu/~jwydola">Assignment1</a></span>
+							<span><a href="assignments/HW1/index.html"">Assignment1</a></span>
 								<p>For the first assignment we were asked to complete the setup of our weblab server. as 
 								the viewer can determine; the server is up and contains my public_html folder.
+								(I do not have my original html file so i included a hello world index.html since that
+								was our basic understanding of html for this assignment).
 								</p>
 							<span><a href="assignments/public_htmlHW2/index.html">Assignment2</a></span>
 								<p>For assignment two we were asked to complete an index.html page. As the viewer can see, they are able to access
@@ -94,17 +98,17 @@
 					</div>
 					<div class="inclassex">
 					<h4 id="inclassex">In Class Exercises</h4>
-						<span>Exercise 1</span>
-							<p><a href="InclassExamples/firstexample/inclassexample.html">Here is a link to the page generated from the first in class
-							exercise</a></p>
-						<span>Exercise 2</span>
-							<p><a  href="InclassExamples/secondExample/example.html">This exercise honed our CSS skills</a></p>
-						<span>Exercise 3</span>
-							<p><a href="InclassExamples/Exercise.html"> This exercise was to familiarize ourselfs with bootstrap and to show our 
-							understanding of the subject by adding appropriate fields</a></p>
+						<span><a href="InclassExamples/firstexample/inclassexample.html">Exercise 1</a></span>
+							<p>Here is a link to the page generated from the first in class
+							exercise</p>
+						<span><a href="InclassExamples/secondExample/example.html">Exercise 2</a></span>
+							<p>This exercise honed our CSS skills, we further developed css</p>
+						<span><a href="InclassExamples/Exercise.html"> Exercise 3</a></span>
+							<p>This exercise was to familiarize ourselfs with bootstrap and to show our 
+							understanding of the subject by adding appropriate fields</p>
 						<span>Exercise 4</span>
-							<p> <a> This exercise was completed as a dual participation between me and A Barbosa, therefore I do not
-							currently have a link to this page. We covered javascript exercise</a></p>
+							<p>This exercise was completed as a dual participation between me and A Barbosa, therefore I do not
+							currently have a link to this page. We covered javascript exercise</p>
 					</div>
 	<!-- create a div class to format this block mor specificlly-->
 				<div class ="languages" id="languages">
@@ -143,5 +147,6 @@
 			</footer>
 			</div>
 		</div>
+		<script src="js/main.js"></script>
 	</body>
 </html>

@@ -41,8 +41,7 @@ ul, li{
 }
 
 
-
-h2, h3, h4{
+h1, h2, h3, h4{
 	overflow:			hidden;
 	font-weight:		bold;
 	letter-spacing:		3px;
@@ -50,6 +49,13 @@ h2, h3, h4{
 	opacity:			0.7;
 	text-transform:		uppercase;
 	margin:			5px	5px;
+	padding-bottom:		10px;
+}
+
+h1{
+	margin:			15px 15px;
+	padding-bottom:	25px;
+	min-width:		250px;
 }
 
 
@@ -198,9 +204,6 @@ center and format these without having to format the entire list (including the 
 /*all a are transparent*/
 a{
 	text-decoration: 	underline;
-}
-.ex1id a, .ex2id a{
-	text-align:	center;
 }
 a:visited{
 	color:				red;
