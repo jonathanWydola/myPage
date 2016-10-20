@@ -13,6 +13,15 @@
 <html lang="en-US">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="css/styles.css">
 		<title>JonathanJWydola</title>
 	</head>
@@ -20,132 +29,159 @@
 	<!--starting with the header to section off from page content-->
 	
 	<body>
-		<div class="width-wrapper">
-			<header class="main-head">
-				<div class="Morty">
-					<img src="3f6.gif" alt="logo">
-						<nav class="main-nav">
-							<ul>
-								<li><a href="#subAboutMe">About Me</a></li>
-								<li><a href="#assignments">Assigments</a></li>
-								<li><a href="#inclassex">In Class Ex</a></li>
-								<li><a href="#languages">Education</a><li>
-								<li><a href="#employers">Current</a></li>
-							</ul>
-						</nav>
+		<header>
+			<nav class="navbar navbar-inverse" id="gradientBackgroundNav">
+				<div class="container-fluid" id="navBarContainer" >
+					<div class="navbar-header" id="navHeaderBox">
+						<!--provided by w3Schools "http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_navbar_collapse&stacked=h"-->
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">J-Trolls</a>
 					</div>
-				<a href="https://github.com/jonathanWydola/myPage/tree/gh-pages"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
-			</header>
-
-	<!-- navigation bar located at the left hand side, will be added to -->
-	<!--		<nav>
-				<ul>
-					<li>About Me</li>
-					<li><a href="#assignments">Assignments</a></li>
-					<li>Projects</li>
-					<li>contact</li>
-				</ul>
-			</nav>
-			
-						<h1>Jonathan Wydola</h1>
-					<div id="picOfMe">
-					<img src="photoOfMe.jpg">
+					<div class="collapse navbar-collapse" id="myNavBar">
+						<ul class="nav navbar-nav" id="navBarUl">
+							<li><a href="#subAboutMe">About Me</a></li>
+							<li><a href="#assignments">Assigments</a></li>
+							<li><a href="#inclassex">InClass-Ex</a></li>
+							<li><a href="#languages">Education</a></li>
+							<li><a href="#employers">Current</a></li>
+						</ul>
 					</div>
-	-->
-			<div class="flex-container">
-			<div class="content">
-				<h1 id="timer"></h1>
-	<!-- this then starts to place items to the right starting with a description-->
-				<h2>About Me</h2>
-				<div id="subAboutMe">
-					<h2>Computer Science Major</h2>
 				</div>
-					<p> My name is Jonathan wydola and I am a senior CS student. I have attended Umass Dartmouth in my previous college adventures.
+			</nav>
+			<a href="https://github.com/jonathanWydola/myPage/tree/gh-pages"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+		</header>   
+		<!--first row contains the java script-->
+			<div class="row" >
+				<div class="col-xs-12">
+					<h1 id="timer"></h1>
+				</div>
+			</div>
+			<!--the row for the about me section-->
+			<div class="row">
+				<!-- this then starts to place items to the right starting with a description-->
+				<h2>About Me</h2>
+				<div class="col-xs-12 col-md-8">
+					<h3>Computer Science Major</h3>
+					<p class="text-center"> My name is Jonathan wydola and I am a senior CS student. I have attended Umass Dartmouth in my previous college adventures.
 						I look to graduate this semester and to pursue a job that works with python and SQL. I have previously been employed by Putnam 
 						Investments where I worked with python scripts to manipulate millions of rows of data. 
 						I participated in one co-op, it is a great program, try it.</p>
+					<div class="row">
+						<div class="col-xs-12 col-md-6" id ="languages">
+							<h3>Languages studied</h3>
+			<!-- using unordered list to display the languages i have studied-->
+								<p class="text-center">C/C++</p>
+								<p class="text-center">Python</p>
+								<p class="text-center">Java</p>
+								<p class="text-center">SQL</p>
+								<p class="text-center">Android</p>
+						</div>				
+			<!--again creating new block for the items i will list as past employers-->
+						<div class="col-xs-12 col-md-6" id="employers">
+							<h3>Past Employers</h3>
+								<p class="text-center">FOODS PLUS inc.</p>
+								<p class="text-center">Putnam Investments</p>
+								<p class="text-center">Grader Computing 2</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-4" id="singleDad">
+					<h3>Single Dad</h3>
+					<p class="text-center" id="sonsAge"></p>
+				</div>
+				
+			</div>
+			<!-- row for the assignments section-->
+			<div class="row">
 	<!-- headers for content, just adding fields to fill up the page-->
-				<div class="assignments">
-					<h4 id="assignments">Assignments</h4>
+				<div class="col-xs-12" id="assignments">
+					<h3 id="assignmentsh3">Assignments</h3>
 					<!-- just a bunch of text for each assignment so far-->
-							<span><a href="assignments/HW1/index.html"">Assignment1</a></span>
-								<p>For the first assignment we were asked to complete the setup of our weblab server. as 
+						<div class="col-xs-12 col-md-4">
+							<h4><a href="assignments/HW1/index.html">Assignment1</a></h4>
+								<p class="text-center">For the first assignment we were asked to complete the setup of our weblab server. as 
 								the viewer can determine; the server is up and contains my public_html folder.
 								(I do not have my original html file so i included a hello world index.html since that
 								was our basic understanding of html for this assignment).
 								</p>
-							<span><a href="assignments/public_htmlHW2/index.html">Assignment2</a></span>
-								<p>For assignment two we were asked to complete an index.html page. As the viewer can see, they are able to access
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<h4><a href="assignments/public_htmlHW2/index.html">Assignment2</a></h4>
+								<p class="text-center">For assignment two we were asked to complete an index.html page. As the viewer can see, they are able to access
 								my index.html page. Originally my page was just some text with a completley different format for the boxes and div
 								tags on this page. I have also removed some pictures and some headers that were previously redundant and were just for practice.
 								</p>
-							<span><a href="assignments/HW3/HW3_source/index.html">Assignment3</a></span>
-								<p>For assignment 3 we were asked to put our CSS skills to the test. This test was to format a html page using a css
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<h4><a href="assignments/HW3/HW3_source/index.html">Assignment3</a></h4>
+								<p class="text-center">For assignment 3 we were asked to put our CSS skills to the test. This test was to format a html page using a css
 								stylesheet. we were required to link the style sheet to the html and to do all of our styling through that reference.
 								I struggled at some detailed points such as determining margin sizes. when I implemented the css, the results were not the same as
 								the pdf.</p>
-							<span><a href="assignments/public_htmlHW4/index.html">Assignment4</a></span>
-								<p>For this assignment we are asked to put out css styles to the test in using our own creativity. For this assignment
-								I decided to use a div class for my top header. This section serves as a block for my logo image and navagation bar.
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<h4><a href="assignments/public_htmlHW4/index.html">Assignment4</a></h4>
+								<p class="text-center">For this assignment we are asked to put out css styles to the test in using our own creativity. For this assignment
+								I decided to use a div id for my top header. This section serves as a block for my logo image and navagation bar.
 								this navagtion bar current just links to locaitons on my page. Im not sure if i want to implement more pages or just have 
 								the index page updated. I also use a flex box to control the contents of the page when the page size changes. Following that are sections that include information about myself including my major etc.
 								I made this page with the idea that one I got this general design down adding to it would be easy. I want to find a better color schema for my page but 
 								the general formatting and how the letter flow and looked was my main concern in proving and providing css knowledge.
 								</p>
-							<span><a href="https://jonathanwydola.github.io/myPage/">Assignment 5</a></span>
-								<p>For this assignment, we were simply asked to host our webpage through git pages. we were also asked to add a java script file with our submission
+						</div>
+						<div class="col-xs-12 col-md-4">
+							<h4><a href="https://jonathanwydola.github.io/myPage/">Assignment 5</a></h4>
+								<p class="text-center">For this assignment, we were simply asked to host our webpage through git pages. we were also asked to add a java script file with our submission
 								</p>
+						</div>
 					</div>
-					<div class="inclassex">
-					<h4 id="inclassex">In Class Exercises</h4>
-						<span><a href="InclassExamples/firstexample/inclassexample.html">Exercise 1</a></span>
-							<p>Here is a link to the page generated from the first in class
+			</div>
+			<!-- inclass exercises-->
+			<div class="row">
+				<div class="col-xs-12 col-md-6" id="inclassex">
+					<h3 id="inclassexh3">In-Class Exercises</h3>
+						<h4><a href="InClassExamples/firstexample/inclassexample.html">Exercise 1</a></h4>
+							<p class="text-center">Here is a link to the page generated from the first in id
 							exercise</p>
-						<span><a href="InclassExamples/secondExample/example.html">Exercise 2</a></span>
-							<p>This exercise honed our CSS skills, we further developed css</p>
-						<span><a href="InclassExamples/Exercise.html"> Exercise 3</a></span>
-							<p>This exercise was to familiarize ourselfs with bootstrap and to show our 
+						<h4><a href="InClassExamples/secondExample/example.html">Exercise 2</a></h4>
+							<p class="text-center"> This exercise honed our CSS skills, we further developed css</p>
+						<h4><a href="InClassExamples/Exercise.html"> Exercise 3</a></h4>
+							<p class="text-center">This exercise was to familiarize ourselfs with bootstrap and to show our 
 							understanding of the subject by adding appropriate fields</p>
-						<span>Exercise 4</span>
-							<p>This exercise was completed as a dual participation between me and A Barbosa, therefore I do not
+						<h4><a>Exercise 4</a></h4>
+							<p class="text-center">This exercise was completed as a dual participation between me and A Barbosa, therefore I do not
 							currently have a link to this page. We covered javascript exercise</p>
 					</div>
-	<!-- create a div class to format this block mor specificlly-->
-				<div class ="languages" id="languages">
-					<span>Languages studied</span>
-	<!-- using unordered list to display the languages i have studied-->
-						<p>C/C++</p>
-						<p>Python</p>
-						<p>Java</p>
-						<p>SQL</p>
-						<p>Android</p>
-				</div>
-				
-	<!--again creating new block for the items i will list as past employers-->
-				<div class="employers" id="employers">
-					<span>Past Employers</span>
-						<p>FOODS PLUS inc.</p>
-						<p>Putnam Investments</p>
-						<p>Grader Computing 2</p>
-				</div>
-				
+			</div>
+	<!-- create a div id to format this block mor specificlly-->	
 	<!-- using this to make a line at bottom of page for my footer-->
-				<div class="endingBR">
+			<div id="endingBR"></div>
+			<div class="row" id="w3Images">
+				<div class="col-xs-12 col-md-3 col-md-offset-2">
+					<!--acquired from "http://www.sanjaywebdesigner.com/articles/wp-content/uploads/2014/07/html5-courses.png" by a post by jesse heines on piaza"-->
+					<img class="img-responsive " style="-webkit-user-select: none" src="http://www.sanjaywebdesigner.com/articles/wp-content/uploads/2014/07/html5-courses.png" alt="validateHTML5">
 				</div>
-				<!--acquired from "http://www.sanjaywebdesigner.com/articles/wp-content/uploads/2014/07/html5-courses.png" by a post by jesse heines on piaza"-->
-				<img style="-webkit-user-select: none" src="http://www.sanjaywebdesigner.com/articles/wp-content/uploads/2014/07/html5-courses.png" alt="validateHTML5">
-				<!-- acquired from "http://www.todayinndhistory.com/images/valid-css.png" by a post on piazza by jesse hienes-->
-				<img style="-webkit-user-select: none" src="http://www.todayinndhistory.com/images/valid-css.png" alt="validateCSS3">
+				<div class="col-xs-12 col-md-3 col-md-offset-2">
+					<!-- acquired from "http://www.todayinndhistory.com/images/valid-css.png" by a post on piazza by jesse hienes-->
+					<img class = "img-responsive" style="-webkit-user-select: none" src="http://www.todayinndhistory.com/images/valid-css.png" alt="validateCSS3">
+				</div>
 			</div>
 
 	<!-- this acts a closing adress in my footer -->
-			<footer>
-					Jonathan J. Wydola.<br>
-					Undergraduate: BA of Computer Science.<br>
-					University of Massachusetts Lowell.<br>
-					<a href="http://weblab.cs.uml.edu/~jwydola">http://weblab.cs.uml.edu/~jwydola</a><br>
-			</footer>
+		<div class="row">
+			<div class="col-xs-12">
+				<footer class="text-center">
+						Jonathan J. Wydola.<br>
+						Undergraduate: BA of Computer Science.<br>
+						University of Massachusetts Lowell.<br>
+						<a href="http://weblab.cs.uml.edu/~jwydola">http://weblab.cs.uml.edu/~jwydola</a><br>
+				</footer>
 			</div>
+		</div>
 		</div>
 		<script src="js/main.js"></script>
 	</body>

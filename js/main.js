@@ -10,6 +10,12 @@ This file is owned by jonathan wydola and is intended for use for educational pu
 var time = new Date();
 var message = '';
 var hour = time.getHours();
+var parkersAge = 2;
+var parkersBirthYear = new Date(2014, 6, 13, 3, 33, 33, 0)
+
+function parkersAgeGenerator(day, birthdate){
+	return day.getFullYear() - birthdate.getFullYear()
+}
 
 /*custom greeting for the time of day*/
 if(hour>=18){
@@ -25,3 +31,6 @@ var timerBox = time.toDateString();
 
 message = message + timerBox;
 document.getElementById("timer").innerHTML = message;
+document.getElementById("sonsAge").innerHTML = "I have a lovely blonde headed baby boy. He is " + parkersAgeGenerator(time,parkersBirthYear) + " years of age as of today thanks to javaScript";
+
+
