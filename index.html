@@ -185,29 +185,38 @@
                     <form class="form-horizontal" name="multForm" action="javascript:void(0)"  onSubmit="return multTable();">                    
                         <div class="form-group form-group-lg" id="col-start">
                             <label class="col-sm-5 text-left">Column Start Value: </label>
-                            <div class="col-sm-3 col-sm-pull-1">
+                            <div class="col-sm-3">
                                 <input type="number" name="cstart" class="form-control input-lg">
+                            </div>
+                            <div class="col-xs-12 col-md-4" id="csError">
                             </div>
                         </div>
                         <div class="form-group" id="col-end">
                             <label class="col-sm-5 text-left">Column End Value: </label>
-                            <div class="col-sm-3 col-sm-pull-1">
+                            <div class="col-sm-3">
                                 <input type="number" name="cend" class="form-control input-lg">
                             </div>
+                            <div class="col-xs-12 col-md-4" id="ceError">
+                            </div>                           
                        </div>
                         <div class="form-group" id="row-start" >
                             <label class="col-sm-5 text-left">Row Start Value:</label>
-                            <div class="col-sm-3 col-sm-pull-1">
+                            <div class="col-sm-3">
                                 <input type ="number" name="rstart" class="form-control input-lg">
+                            </div>
+                            <div class="col-xs-12 col-md-4" id="rsError">
                             </div>
                         </div>
                         <div class="form-group" id="row-end">
                             <label class="col-sm-5 text-left">Row End Value: </label>
-                            <div class="col-sm-3 col-sm-pull-1">
+                            <div class="col-sm-3">
                                 <input type="number" name="rend" class="form-control input-lg">
                             </div>
+                            <!-- for error messages-->
+                            <div class="col-xs-12 col-md-4" id="reError">
+                            </div>
                         </div>
-                        <input class="col-xs-12 col-md-12 btn btn-lg btn-primary" type="submit" value="generate">
+                        <input class="col-xs-12 col-md-12 btn btn-lg btn-primary" type="submit" value="generate" id="submissionbutton">
                     </form>
                 </div>
                             <!--beggining the table-->

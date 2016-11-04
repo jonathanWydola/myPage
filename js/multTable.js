@@ -17,6 +17,11 @@ function multTable(){
     var rowStart = parseInt(multForm.rstart.value);
     var rowEnd = parseInt(multForm.rend.value);
     var validation = function(){
+        var subBut = document.getElementById("submissionbutton");
+        var cSE = document.getElementById("csError");
+        var cEE = document.getElementById("ceError");
+        var rSE = document.getElementById("rsError");
+        var rEE = document.getElementById("reError");
         /*easiest way i could handle descending inputs and negatives*/
         var swapIfGreater = function(){
             //swap the values
@@ -35,18 +40,35 @@ function multTable(){
         };
         
         //empty input
-        var validateSpace = function(data){
+        var validateSpace = function(data, errorTag){
+            var wrapper = document.createElement("div");
             if ((data === "") || (data === " ") || (data === isNaN(data))){
+                var textP = document.createElement("p");
+                var textPNode = document.createTextNode("only accepts integer values");
+                textP.appendChild(textPNode);
+                wrapper.appendChild(textP);
+                errorTag.innerHTML = wrapper.innerHTML;
                 return false;
-            } 
-            return true;
+            } else {
+                if (isNaN(data)===isNaN(NaN)){
+                    var textP2 = document.createElement("p");
+                    var textPNode2 = document.createTextNode("No input is not allowed");
+                    textP2.appendChild(textPNode2);
+                    wrapper.appendChild(textP2);
+                    errorTag.innerHTML = wrapper.innerHTML;
+                    return false;
+                } else{
+                    errorTag.innerHTML = "";
+                    return true;
+                }
+            }
         };
         
         //validateInputs
-        var truth1 = validateSpace(colStart);
-        var truth2 = validateSpace(colEnd);
-        var truth3 = validateSpace(rowStart);
-        var truth4 = validateSpace(rowEnd);
+        var truth1 = validateSpace(colStart, cSE);
+        var truth2 = validateSpace(colEnd, cEE);
+        var truth3 = validateSpace(rowStart, rSE);
+        var truth4 = validateSpace(rowEnd, rEE);
        
         
         
@@ -54,8 +76,10 @@ function multTable(){
         if((truth1) && (truth2) && (truth3) && (truth4)){
             swapIfGreater(colStart, colEnd);
             swapIfGreater(rowStart, rowEnd);
+            subBut.setAttribute("class", "col-xs-12 col-md-12 btn btn-lg btn-success");
             return true;
         } else{
+            subBut.setAttribute("class", "col-xs-12 col-md-12 btn btn-lg btn-warning");
             return false;
         }
         
@@ -63,7 +87,6 @@ function multTable(){
     
     /* THIS WILL BE THE MAIN */
     var res = validation(colStart, colEnd, rowStart, rowEnd); 
-    
     //passes validation and begins building the table
     if (res === true){
         //counters
