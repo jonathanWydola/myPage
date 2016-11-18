@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- 
+	COMP.4610: Assignment 1
+	Jonathan Wydola. Umass Lowell Undergraduate. Jonathan_Wydola@student.uml.edu
+	Date Created: 9/13/2016
+	Updated by Jonathan Wydola on Nov 3, 2016 at 11:22 pM.
+-->
+
+<!-- below are the links for my css sheet as well as my title -->
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/styles.css">
+        <title>JonathanJWydola</title>
+    </head>
+	
+    <!--starting with the header to section off from page content-->
+	
+    <body>           
+        <!--Nesting like this because it got weird behavior before-->
+        <!-- help provided by :
+        http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_horizontal_all&stacked=h 
+        for formatting"-->
+        <div class="row" id="multiplicationTable">
+            <div class="col-xs-12 col-md-6 text-center">
+                <h3>Multiplication Table</h3>
+                <p> This forms only requirement is that the input is numbers, the numbers can be in backwards
+                order and the java script will swap the values in the table</p>
+                <form class="form-horizontal" name="multForm" action="javascript:void(0)"  onSubmit="return multTable();">                    
+                    <div class="form-group form-group-lg" id="col-start">
+                        <label class="col-sm-5 text-left">Column Start Value: </label>
+                        <div class="col-sm-3">
+                            <input type="number" name="cstart" class="form-control input-lg">
+                        </div>
+                        <div class="col-xs-12 col-md-4" id="csError">
+                        </div>
+                    </div>
+                    <div class="form-group" id="col-end">
+                        <label class="col-sm-5 text-left">Column End Value: </label>
+                        <div class="col-sm-3">
+                            <input type="number" name="cend" class="form-control input-lg">
+                        </div>
+                        <div class="col-xs-12 col-md-4" id="ceError">
+                        </div>                           
+                   </div>
+                    <div class="form-group" id="row-start" >
+                        <label class="col-sm-5 text-left">Row Start Value:</label>
+                        <div class="col-sm-3">
+                            <input type ="number" name="rstart" class="form-control input-lg">
+                        </div>
+                        <div class="col-xs-12 col-md-4" id="rsError">
+                        </div>
+                    </div>
+                    <div class="form-group" id="row-end">
+                        <label class="col-sm-5 text-left">Row End Value: </label>
+                        <div class="col-sm-3">
+                            <input type="number" name="rend" class="form-control input-lg">
+                        </div>
+                        <!-- for error messages-->
+                        <div class="col-xs-12 col-md-4" id="reError">
+                        </div>
+                    </div>
+                    <input class="col-xs-12 col-md-12 btn btn-lg btn-primary" type="submit" value="generate" id="submissionbutton">
+                </form>
+            </div>
+                        <!--beggining the table-->
+            <div class="col-xs-12 col-md-6">
+                <h3>Multiplication Table Output</h3>
+                <div class="table-responsive" id="table-responsive">
+                </div>
+            </div>
+        </div>
+
+    
+<!-- create a div id to format this block mor specificlly-->	
+<!-- using this to make a line at bottom of page for my footer-->
+        <div id="endingBR"></div>
+        <div class="row" id="w3Images">
+            <div class="col-xs-12 col-md-3 col-md-offset-2">
+                <!--acquired from "http://www.sanjaywebdesigner.com/articles/wp-content/uploads/2014/07/html5-courses.png" by a post by jesse heines on piaza"-->
+                <img class="img-responsive " style="-webkit-user-select: none" src="http://www.sanjaywebdesigner.com/articles/wp-content/uploads/2014/07/html5-courses.png" alt="validateHTML5">
+            </div>
+            <div class="col-xs-12 col-md-3 col-md-offset-2">
+                <!-- acquired from "http://www.todayinndhistory.com/images/valid-css.png" by a post on piazza by jesse hienes-->
+                <img class = "img-responsive" style="-webkit-user-select: none" src="http://www.todayinndhistory.com/images/valid-css.png" alt="validateCSS3">
+            </div>
+        </div>
+
+    <!-- this acts a closing adress in my footer -->
+        <div class="row">
+            <div class="col-xs-12" id="footwrap">
+                <footer class="text-center">
+                        Jonathan J. Wydola.<br>
+                        Undergraduate: BA of Computer Science.<br>
+                        University of Massachusetts Lowell.<br>
+                        <a href="https://jonathanWydola.github.io/myPage/">https://jonathanWydola.github.io/myPage/index.html</a><br>
+                </footer>
+            </div>
+        </div>
+        <script src="js/multTable.js"></script>
+    </body>
+</html>

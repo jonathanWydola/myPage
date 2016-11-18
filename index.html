@@ -83,7 +83,7 @@
                                 <p>Android</p>
                         </div>				
             <!--again creating new block for the items i will list as past employers-->
-                        <div class="col-xs-12 col-md-6 text-center" id="employers">
+                        <div class="col-xs-12 col-md-4 text-center" id="employers">
                             <h3>Past Employers</h3>
                                 <p>FOODS PLUS inc.</p>
                                 <p>Putnam Investments</p>
@@ -105,6 +105,7 @@
                 </div>
             </div>
             
+            <!-- in order to quickly fix the styling error i am now getting, each row contains only three columns-->
             <div class="row">
                 <!-- just a bunch of text for each assignment so far-->
                 <div class="col-xs-12 col-md-4">
@@ -129,6 +130,9 @@
                         I struggled at some detailed points such as determining margin sizes. when I implemented the css, the results were not the same as
                         the pdf.</p>
                 </div>
+            </div>
+            <!-- second row of assingments-->
+            <div class="row">
                 <div class="col-xs-12 col-md-4">
                     <h4><a href="assignments/public_htmlHW4/index.html">Assignment4</a></h4>
                         <p>For this assignment we are asked to put out css styles to the test in using our own creativity. For this assignment
@@ -145,15 +149,18 @@
                         </p>
                 </div>
                 <div class="col-xs-12 col-md-4">
-                    <h4><a href="assignments/Hw6/index.html#multiplicationTable">Assignment 6</a></h4>
+                    <h4><a href="assignments/Hw6/multForm.html">Assignment 6</a></h4>
                         <p>For this assignment we were asked to construct a multiplication table using javascript
                         I have done this by creating my table using DOM elements and by setting the innerHTML of the desired output.
                         Many factors were considered when developing this code. Valid input includes integer values, the form will not continue unless integers are entered.
                         the order in which the integers are inputed do no matter since the java script orders them in ascending order.
                         </p>
                 </div> 
+            </div>
+            <!-- third row-->
+            <div class = "row">
                 <div class = "col-xs-12 col-md-4">
-                    <h4><a href = "#multiplicationTable">Assignment 7</a></h4>
+                    <h4><a href = "assignments/HW7/multForm.html">Assignment 7</a></h4>
                         <p>For this assignment we were asked to simply convert the validation tools we used for assignment 6
                         to use the jquery validation instead</p>
                 </div>
@@ -191,61 +198,6 @@
                             <h4>Further development</h4>
                     </div>
             </div>
-            
-            <!--Nesting like this because it got weird behavior before-->
-            <!-- help provided by :
-            http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_horizontal_all&stacked=h 
-            for formatting"-->
-            <div class="row" id="multiplicationTable">
-                <div class="col-xs-12 col-md-6 text-center">
-                    <h3>Multiplication Table</h3>
-                    <p> This forms only requirement is that the input is numbers, the numbers can be in backwards
-                    order and the java script will swap the values in the table</p>
-                    <form class="form-horizontal" name="multForm" action="javascript:void(0)"  onSubmit="return multTable();">                    
-                        <div class="form-group form-group-lg" id="col-start">
-                            <label class="col-sm-5 text-left">Column Start Value: </label>
-                            <div class="col-sm-3">
-                                <input type="number" name="cstart" class="form-control input-lg">
-                            </div>
-                            <div class="col-xs-12 col-md-4" id="csError">
-                            </div>
-                        </div>
-                        <div class="form-group" id="col-end">
-                            <label class="col-sm-5 text-left">Column End Value: </label>
-                            <div class="col-sm-3">
-                                <input type="number" name="cend" class="form-control input-lg">
-                            </div>
-                            <div class="col-xs-12 col-md-4" id="ceError">
-                            </div>                           
-                       </div>
-                        <div class="form-group" id="row-start" >
-                            <label class="col-sm-5 text-left">Row Start Value:</label>
-                            <div class="col-sm-3">
-                                <input type ="number" name="rstart" class="form-control input-lg">
-                            </div>
-                            <div class="col-xs-12 col-md-4" id="rsError">
-                            </div>
-                        </div>
-                        <div class="form-group" id="row-end">
-                            <label class="col-sm-5 text-left">Row End Value: </label>
-                            <div class="col-sm-3">
-                                <input type="number" name="rend" class="form-control input-lg">
-                            </div>
-                            <!-- for error messages-->
-                            <div class="col-xs-12 col-md-4" id="reError">
-                            </div>
-                        </div>
-                        <input class="col-xs-12 col-md-12 btn btn-lg btn-primary" type="submit" value="generate" id="submissionbutton">
-                    </form>
-                </div>
-                            <!--beggining the table-->
-                <div class="col-xs-12 col-md-6">
-                    <h3>Multiplication Table Output</h3>
-                    <div class="table-responsive" id="table-responsive">
-                    </div>
-                </div>
-            </div>
-
         
     <!-- create a div id to format this block mor specificlly-->	
     <!-- using this to make a line at bottom of page for my footer-->
@@ -273,6 +225,5 @@
             </div>
         </div>
         <script src="js/main.js"></script>
-        <script src="js/multTable.js"></script>
     </body>
 </html>

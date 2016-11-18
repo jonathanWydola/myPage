@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- 
+	COMP.4610: Assignment 1
+	Jonathan Wydola. Umass Lowell Undergraduate. Jonathan_Wydola@student.uml.edu
+	Date Created: 9/13/2016
+	Updated by Jonathan Wydola on Nov 3, 2016 at 11:22 pM.
+-->
+
+<!-- below are the links for my css sheet as well as my title -->
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--my css-->
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!-- Jquery validation Tools-->
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js"></script>
+        <title>JonathanJWydola</title>
+    </head>
+
+    <body>
+        <!--Nesting like this because it got weird behavior before-->
+        <!-- help provided by :
+        http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_horizontal_all&stacked=h 
+        for formatting"-->
+        <div class="row" id="multiplicationTable">
+            <div class="col-xs-12 col-md-6 text-center">
+                <h3>Multiplication Table</h3>
+                <p> This forms only requirement is that the input is numbers, the numbers can be in backwards
+                order and the java script will swap the values in the table</p>
+                <form class="form-horizontal" name="multForm" id="multForm">                    
+                    <fieldset>
+                        <div class="form-group" id="col-start">
+                            <label class="col-sm-5 control-label text-left">Column Start Value: </label>
+                            <div class="col-sm-3 input-group">
+                                <input type="number" name="cstart" class="form-control input-lg valinp">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-group" id="col-end">
+                            <label class="col-sm-5 control-label text-left">Column End Value: </label>
+                                <div class="col-sm-3 input-group">
+                                    <input type="number" name="cend" class="form-control input-lg valinp">
+                                </div>                        
+                       </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-group" id="row-start" >
+                            <label class="col-sm-5 control-label text-left">Row Start Value:</label>
+                            <div class="col-sm-3 input-group">
+                                <input type ="number" name="rstart" class="form-control input-lg valinp">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-group" id="row-end">
+                            <label class="col-sm-5 control-label text-left">Row End Value: </label>
+                            <div class="col-sm-3 input-group">
+                                <input type="number" name="rend" class="form-control input-lg valinp" id="rend">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button class="col-xs-12 col-md-12 btn btn-lg btn-primary" type="submit" id="submissionbutton">Generate Table</button>
+                </form>
+            </div>
+        </div>
+        <!--beggining the table-->
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Multiplication Table Output</h3>
+                <div class="table-responsive" id="table-responsive">
+                    <div class="multTable" id="multTable"></div>
+                </div>
+            </div>
+        </div>
+        <script src="js/multTable.js"></script>
+    </body>
+</html>
