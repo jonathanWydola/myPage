@@ -56,22 +56,6 @@ $(document).ready(function(){
                 digits:     "Number must only contain digits"
             }
         },
-        highlight: function(element){
-            $(element).closest('.form-group').addClass('has-error');
-        },
-        unhighlight: function(element){
-            $(element).closest('.form-group').removeClass('has-error');
-        },
-        errorElement: 'input', 
-        errorClass: 'help-block',
-        errorPlacement: function(error, element){
-            if(element.parent('.col-sm-3 input-group').length){
-                error.insertAfter(element.parent());
-            }
-            else {
-                error.insertAfter(element);
-            }
-        },
         submitHandler: function(form){
             form.submit();
         }
