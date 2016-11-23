@@ -162,22 +162,22 @@ $(document).ready(function() {
     	slinitA: {
             required: true,
             number: true
-	},
-	slinitB: {
-            required: true,
-            number: true,
-            greaterThan: "#slinitA"
-	},
-	slendA: {
-            required: true,
-            number: true
-	},
-	slendB: {
-            required: true,
-            number: true,
-            greaterThan: "#slendA"
-        }
-    }, //End of rules.
+        },
+        slinitB: {
+                required: true,
+                number: true,
+                greaterThan: "#slinitA"
+        },
+        slendA: {
+                required: true,
+                number: true
+        },
+        slendB: {
+                required: true,
+                number: true,
+                greaterThan: "#slendA"
+            }
+        }, //End of rules.
     messages: {
         slinitA: {
             required : function() {
@@ -188,8 +188,8 @@ $(document).ready(function() {
                 $("#slinitA").focus();
                 return "Please enter a number for the lower bound of the multipliers. <br />";
             }
-	},
-	slinitB: {
+        },
+        slinitB: {
             required: function() {
                 $("#slinitB").focus();
                 return "Please enter a number for the upper bound of the multipliers. <br />";
@@ -201,7 +201,7 @@ $(document).ready(function() {
             greaterThan: function() {
                 return "The number entered for the upper bound of the multipliers should be greater than the the multipliers' lower bound. <br />";
             }
-	},
+        },
         slendA: {
             required: function() {
                 $("#slendA").focus();
@@ -211,8 +211,8 @@ $(document).ready(function() {
                 $("#slendA").focus();
                 return "Please enter a number for the lower bound of the multiplicands. <br />";
             }
-	},
-	slendB: {
+        },
+        slendB: {
             required: function() {
                 $("#slendB").focus();
                 return "Please enter a number for the upper bound of the multiplicands. <br />";
