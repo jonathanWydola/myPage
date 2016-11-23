@@ -139,17 +139,19 @@ input{
 input:focus{
     border-color:       #DD614A;
 }
+/*sets the width of ui sliders*/
 #slinitASlider, #slinitBSlider,
 #slendASlider, #slendBSlider{
     width:              250px;
     display:            inline-block;
 }
 label.errorMsg{
-    color:              #DD614A;
+    color:              red;
     font-size:          .65em;
     font-weight:        bold;
     margin-left:        10px;
 }
+/*below handles the functionality of the ui tabs widget*/
 .ui-tabs .ui-tabs-nav {
     margin:             0;
     padding:            .3em .3em 0;

@@ -83,6 +83,7 @@ $(document).ready(function() {
        var $otherElement = $(param);
        return parseInt(value, 10) > parseInt($otherElement.val(), 10);
     });
+        //default slider properties
         $("#slinitASlider").slider({
             orientation: "horizontal",
             range: "min",
@@ -109,7 +110,7 @@ $(document).ready(function() {
                 $("input#slinitB").val(ui.value);
             }
         });
-        
+        //indicates a change therefore retrieval is essential
         $("slinitB").change(function (e) {
             var iB = parseInt("slinitB").val();
             $("#slinitBSlider").slider("value", iB);
