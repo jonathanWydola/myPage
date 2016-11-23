@@ -250,7 +250,6 @@ $(document).ready(function() {
         //$(element).css({ "border" : ""});
     }, //End of success().			   //Taken from Professor Heines's webpage.
     }); //End of validate().
-    
     $(".add-tab").button().click(function() {
         //Prints out link to content of tabs.
         prevNumTab = numTab;
