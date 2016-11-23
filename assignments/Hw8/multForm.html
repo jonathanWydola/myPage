@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- 
+	COMP.4610: Assignment 1
+	Jonathan Wydola. Umass Lowell Undergraduate. Jonathan_Wydola@student.uml.edu
+	Date Created: 9/13/2016
+	Updated by Jonathan Wydola on Nov 3, 2016 at 11:22 pM.
+-->
+
+<html lang="en-US">
+    <head>
+        <title>Assignment #8: Using the jQuery UI Slider and Tab Widgets</title>
+        <meta charset="UTF-8">
+        
+        <!-- CSS  -->
+        <link href="css/styles.css" type="text/css" rel="stylesheet">
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <!-- jQuery UI CSS from https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css: -->
+        <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css" rel="stylesheet">
+        
+         <!-- Including the jQuery library for future use. -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        
+        <!-- jQuery Validation Plugins from jqueryvalidation.org. -->
+        <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.js"></script>
+        <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
+        <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.js"></script>
+        <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js"></script>
+        
+        
+        <!-- Referenced from: http://stackoverflow.com/questions/31075893/im-getting-favicon-ico-error
+            Used to solve Flavicon issue while debugging on NetBeans. -->
+        <script src="js/multTablev2.js"></script>
+        <link rel="shortcut icon" href="#" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-inverse" id="gradientBackgroundNav">
+                <div class="container-fluid" id="navBarContainer" >
+                    <div class="navbar-header" id="navHeaderBox">
+                        <!--provided by w3Schools "http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_navbar_collapse&stacked=h"-->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">JWydola</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavBar">
+                        <ul class="nav navbar-nav" id="navBarUl">
+                            <li><a href="..\..\index.html#subAboutMe">About Me</a></li>
+                            <li><a href="..\..\index.html#assignments">Assigments</a></li>
+                            <li><a href="..\..\index.html#inclassex">InClass-Ex</a></li>
+                            <li><a href="..\..\index.html#languages">Education</a></li>
+                            <li><a href="..\..\index.html#employers">Current</a></li>
+                        </ul>  
+                    </div>
+                </div>
+            </nav>
+        </header> 
+       <div id="introduction">
+            <h1>MultTable 2.0, Redone to hopefully fix some issues with styles</h1>
+            <p>Please enter 4 numbers, this willl serve as the ranges for the multiplication table's multiplier and multiplicand.<br>
+            The range permitted in this specific multiplier is from 0 to 250.</p>
+        </div>
+        <div id="tablabels">
+            <!-- Referenced from: http://www.w3schools.com/html/html_forms.asp -->
+            <!-- Referenced from: https://teaching.cs.uml.edu/~heines/91.461/91.461-2015-16f/461-lecs/code/ChrisBurbineValidationTest.pdf -->
+            <form id="multForm" name="multForm" method="GET" action="javascript:void(0)">
+                <!-- I know this is a really ugly way of making a form appear clean, but it should suffice for now.
+                     Will further investigate how to make it more elegant in the future. -->
+                <p>Column Start(Begin):</p><input type="text" id="slinitA" name="slinitA" class="required">
+                <div id="slinitASlider"></div><br>
+                <p>Column Stop(End): </p><input type="text" id="slinitB" name="slinitB" class="required">
+                <div id="slinitBSlider"></div><br>
+                <p>Row Start (Begin):</p><input type="text" id="slendA" name="slendA" class="required">
+                <div id="slendASlider"></div><br>
+                <p>Row End(End):</p> <input type="text" id="slendB" name="slendB" class="required">
+                <div id="slendBSlider"></div><br>
+                
+                <!-- Labels for jQuery validation here! -->
+                <label for="slinitA" class="errorMsg" id="slinitAErr"></label>
+                <label for="slinitB" class="errorMsg" id="slinitBErr"></label>
+                <label for="slendA" class="errorMsg" id="slendAErr"></label>
+                <label for="slendB" class="errorMsg" id="slendBErr"></label><br>
+                <!-- Handles submission in the submitForm() described @js/a6v2.js and @js/a8.js. -->
+                <!--<input type="button" onclick="submitForm()" value="Submit"/>-->
+                <button class="add-tab">Add Tab</button>
+                <button class="remove-all-tabs">Remove All Tabs</button><br><br>
+            </form>
+        </div>
+        
+        <!-- Set up for tabs widget: -->
+        <!-- Referenced from: http://stackoverflow.com/questions/11616255/jquery-ui-tabs-multiple-dynamically-created-tabs-tab-content-all-displays-in -->
+        <div id="tabsNav">
+            <!-- The links to each tab will be contained here: -->
+            <ul id="tabsHref" class="ui-tabs-nav"></ul>
+            <div id="tables">
+            
+            </div>
+        </div>
+    </body>
+</html>
