@@ -7,7 +7,7 @@ updated Nov 22 2016 11:20pm
 This file is owned by jonathan wydola and is intended for use for educational purposes only
 */
 
-function outputTable(iA, iB, eA, eB, numTab) {
+function multTable(iA, iB, eA, eB, numTab) {
     if((!isNaN(iA) && !isNaN(iB) && !isNaN(eA) && !isNaN(eB))) {
         //Starts creating the table:
         var slendA, slendB, slinitA, slinitB;
@@ -263,7 +263,7 @@ $(document).ready(function() {
         tabs.tabs("refresh");
         
       
-        numTab = outputTable(siA.value, siB.value, seA.value, seB.value, numTab);
+        numTab = multTable(siA.value, siB.value, seA.value, seB.value, numTab);
         tabs.tabs("refresh");
         
         /* Makes it so that the newest tab is the active one: */
