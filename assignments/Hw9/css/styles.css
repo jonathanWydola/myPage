@@ -1,0 +1,83 @@
+/* 
+	Date Created: 9/13/2016
+	Updated by Jonathan Wydola on Nov 3 2016 at 11:32 pm
+	this file contains all information used for the styling of my index#html
+*/
+
+
+h1, h2, h3, h4{
+    text-align:         center;
+    margin-bottom:	    15px;
+    text-transform:	    capitalize;
+    font-weight:	    bold;
+    color:			    black;
+    opacity:		    .8;
+}
+
+h4{
+    font-size:	    	22x;
+    font-weight:	    bold;
+}
+
+p, a, li, ul, label{
+    color:		        #4F5D5B;
+    font-size:	        18px;
+    letter-spacing:	    .12em;
+    font-weight:	    bold;
+}
+
+p #scrbrd{
+    padding-left:       12em;
+    font-weight:        bold;
+    color:              black;
+}
+
+a, a:hover{
+    text-decoration:	none;
+}
+
+a:hover{
+    color:      		#282F38;
+}
+
+body{
+    font-family:    	"Helvetica";
+    background:         #D6EADF; /*all browsers that do not support graident*/
+    background:         -webkit-linear-gradient(to bottom, rgba(214, 234, 223, 1), rgba(222, 242, 223, 1), rgba(0,0,0,1)); /*Safari 5.1-6*/
+    background:         -o-linear-gradient(to bottom,rgba(214, 234, 223, 1), rgba(222, 242, 223, 1), rgba(0,0,0,1)); /*Opera 11.1-12*/
+    background:         -moz-linear-gradient(to bottom,rgba(214, 234, 223, 1), rgba(222, 242, 223, 1), rgba(0,0,0,1)); /*Fx 3.6-15*/
+    background:         linear-gradient(to bottom, rgba(214, 234, 223, 1), rgba(222, 242, 223, 1), rgba(255, 255, 255, 1));	
+    font-family:        'Mogra', 'cursive';
+}
+/*background for header */
+#gradientBackgroundNav{
+    background:         #D6EADF; /*all browsers that do not support graident*/
+    background:         -webkit-linear-gradient(to bottom, rgba(214, 234, 223, 1), rgba(222, 242, 223, 1)); /*Safari 5.1-6*/
+    background:         -o-linear-gradient(to bottom,rgba(214, 234, 223, 1), rgba(222, 242, 223, 1)); /*Opera 11.1-12*/
+    background:         -moz-linear-gradient(to bottom,rgba(214, 234, 223, 1), rgba(222, 242, 223, 1)); /*Fx 3.6-15*/
+    background:         rgba(214, 234, 223, 1);
+    border:		        none;
+}
+/*spacing for all elements of header*/
+#navBarContainer{
+    margin:			    0px	20px;
+    padding-left:	    10px;
+    letter-spacing:	    .3em;
+    font-weight:	    bold;
+    
+}
+#navHeaderBox a{
+    font-size:		    x-large;
+}
+#navBarUl a{
+    opacity:		    .7em;
+    font-size:		    1.1em;
+    padding-left:	    10px;
+    font-family:	    'Helvetica';
+    letter-spacing:	    .14em;
+    word-spacing:	    .1em;
+}
+/*color for navbar*/
+#navBarUl a, #navHeaderBox a{
+    color:			    #585481
+}
