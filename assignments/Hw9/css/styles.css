@@ -173,8 +173,8 @@ body{
 /*container so the page doesnt move*/
 /* ref: http://stackoverflow.com/questions/4641436/stop-the-browser-from-pushing-everything-around-when-i-resize*/
 #containHolder{
-    min-width:          1360px;
-    max-width:          1360px;
+    min-width:          1460px;
+    max-width:          1460px;
     margin:             0 auto;
 }
 /*background for header */
