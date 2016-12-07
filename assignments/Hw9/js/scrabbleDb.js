@@ -34,9 +34,9 @@ function findWrd(){
     /* ref:http://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript*/
     var respInd = Math.floor(Math.random() * resp.length - 1);
     
-    for (var i = dict.length -1; i >= 0; i--){
+    for (var i = dict.length - 1; i >= 0; i--){
         if(dict[i] == wrd){
-            document.getElementById("errors").innerHTML = resp[respInd] + "*(You have been awared points, Some tiles, And a fresh board)*"
+            document.getElementById("errors").innerHTML = resp[respInd] + "*(You have been awared points, Some tiles, And a fresh board)*";
             wrdFnd = true;
             prevScore = score;
         }
@@ -44,7 +44,8 @@ function findWrd(){
     if(!wrdFnd){
         document.getElementById("errors").innerHTML = errResp[respInd] +
          "*(You have INCORRECTLY entered a word, your letters " +
-         "have been returned and you are given another chance)*";     
+         "have been returned and you are given another chance)*";    
+        score = prevScore;
     }
     rstBrd();
 }
@@ -61,32 +62,37 @@ function chckWrd(){
     var mrThnOne = false;
     var frstLett = true;
     var lstLett = true;
+    var emptyBrd = true;
     
     for(var i = 0; i <= lettOnBrd.length -1; i++){
-        if(LettOnBrd[i] != '' && frstLett == true){
+        if(lettOnBrd[i] != '' && frstLett == true){
             wrd += lettOnBrd[i];
             frstLett = false;
             frstInd = i;
+            lstInd = i;
+            console.log(wrd);
         } else if (lettOnBrd[i] != '' && frstLett == false) {
             wrd += lettOnBrd[i];
             lstInd = i;
+            console.log(wrd);
         }   
-    }
-    
-    for(var i = frstInd; i <= lstInd; i++){
-        if(lettOnBrd[i] == ' ' || lettOnBrd[i] == ''){
+    };
+
+    for (var j = frstInd; j <= lstInd; j++){
+        if(lettOnBrd[j] === ''){
             document.getElementById("errors").innerHTML = "Word may NOT contain spaces between letters";
             invldWrd = true;
         }
-    }
+    };
 }
 
 /*if word is valid then find the wrd value*/
 function sbmtWrd(){
-    if(!invldWrd){
-        findWrd();
-    } else {
+    chckWrd();
+    if(invldWrd){
         score = prevScore;
-        
+        rstBrd();
+    } else {
+        findWrd();   
     }
 }

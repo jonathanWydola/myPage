@@ -5,6 +5,126 @@
 */
 
 
+.tiles {
+    width:              70px;
+    height:             70px;
+}
+
+div #tile0 {
+    width:              70px;
+    height:             70px;
+    padding:            0px;
+    margin:             0px;
+}
+
+div #tile1 {
+    width:              70px;
+    height:             70px;
+    padding:            0px;
+    margin:             0px;
+}
+
+div #tile2 {
+    width:              70px;
+    height:             70px;
+    padding:            0px;
+    margin:             0px;
+}
+
+div #tile3 {
+    width:              70px;
+    height:             70px;
+    padding:            0px;
+    margin:             0px;
+}
+
+div #tile4 {
+    width:              70px;
+    height:             70px;
+    padding:            0px;
+    margin:             0px;
+}
+
+div #tile5 {
+    width:              70px;
+    height:             70px;
+    padding:            0px;
+    margin:             0px;
+}
+
+div #tile6 {
+    width:              70px;
+    height:             70px;
+    padding:            0px;
+    margin:             0px;
+}
+
+
+/*forgot to make this css rule and dropping and draggable didnt work*/
+
+.ui-droppable {
+    display:            inline-block;
+    width:              80px;
+    height:             80px;
+}
+
+/*ref: http://stackoverflow.com/questions/11206109/how-to-put-image-in-center-of-html-page*/
+#dnmbrd{
+    margin:             45px 130px;
+}
+#scrbrd{
+    margin:             auto auto;
+}
+#scrbrck{
+    margin:             auto 28%;
+}
+#buttonHolder{
+    margin:             auto 35%;
+}
+#buttonHolder button{
+    padding:            25px;
+}
+.dnmbrd {
+    display:            inline-block;
+    float:              left;
+    margin:             0 auto;
+    width:              80px;
+    height:             80px;
+}
+
+.scrbrck {
+    display:            block;
+    margin:             85px auto;
+    width:              550px;
+    height:             67px;
+    text-align:         center;
+}
+#scrbrck img{
+    height:             100px;
+    width:              600px;
+}
+
+.scrbrd fieldset{
+    padding-top:        20px;
+    padding-bottom:     10px;
+    margin:             0px auto 30px auto;
+    width:              30px;
+    text-align:         center;
+}
+
+.error fieldset{
+    padding-top:        20px;
+    padding-bottom:     10px;
+    margin:             35px auto 0px auto;
+    width:              515px;
+    height:             100px;
+    text-align:         center;
+}
+
+
+
+
+
 h1, h2, h3, h4{
     text-align:         center;
     margin-bottom:	    15px;
@@ -48,6 +168,13 @@ body{
     background:         -moz-linear-gradient(to bottom,rgba(214, 234, 223, 1), rgba(222, 242, 223, 1), rgba(0,0,0,1)); /*Fx 3.6-15*/
     background:         linear-gradient(to bottom, rgba(214, 234, 223, 1), rgba(222, 242, 223, 1), rgba(255, 255, 255, 1));	
     font-family:        'Mogra', 'cursive';
+}
+
+/*container so the page doesnt move*/
+/* ref: http://stackoverflow.com/questions/4641436/stop-the-browser-from-pushing-everything-around-when-i-resize*/
+#containHolder{
+    min-width:          1330px;
+    margin:             0 auto;
 }
 /*background for header */
 #gradientBackgroundNav{

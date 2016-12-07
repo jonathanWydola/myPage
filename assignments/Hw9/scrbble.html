@@ -31,6 +31,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.8.0/math.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.8.0/math.min.js"></script>
         
+        <!-- caller-->
+        <script>
+        $(function(){
+            newBoard();
+            fillR();
+        });
+        </script>
+        
         <title>JJW9</title>
     </head>
 
@@ -60,27 +68,33 @@
             </nav>
         </header> 
         <!--Begin with printing contents to screen-->
-        <div class="row">
-            <div class="col-xs-12 col-md-3">
-                <div id="scrbrd">
-                    <h2>SCORE:</h2>
-                    <div id="score"></div>
-                </div>             
-            </div>
-            <div class="col-xs-12 col-md-9">
-                <!--dynamic single row-->
-                <div id="dnmbrd"><!--js injection--></div>
-                <div id="scrbrck">
-                    <img src="scrbimg/scrabble-tile-holder.png" alt="RACK">
+        <div id="containHolder">
+            <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <div id="scrbrd">
+                        <fieldset>
+                            <h2>SCORE: <p id="score"></p> </h2>
+                        </fieldset>
+                    </div>             
                 </div>
+            </div>
+            <!--dynamic single row-->
+            <div id="dnmbrd"><!--js injection--></div>
+            <div id="scrbrck">
+                <img src="scrbimg/scrabble-tile-holder.png" alt="RACK">
+            </div>
+            <div id="buttonHolder">
                 <button onclick="sbmtWrd()">Submit word</button>
                 <button onclick="rstGm()">Reset Game</button>
                 <button onclick="newBoard()">New Game</button>
-                <div class="error">
-                    <div id="errors">none</div>
-                </div>
-                <div id="tiles"></div>
             </div>
+            <div class="error">
+                <fieldset>
+                    <legend>Errs</legend>
+                    <div id="errors">none</div>
+                </fieldset>
+            </div>
+            <div id="tiles"></div>
         </div>
         <script src="js/scrabbleJs.js"></script>
         <script src="js/scrabbleArr.js"></script>
