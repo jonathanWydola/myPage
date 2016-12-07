@@ -23,19 +23,19 @@ $(document).ready(function(){
         /*to get the proper position i broke up the image into single board tiles*/
         for(var i = 0; i < 15; i++){
             if ( i == 2 || i == 12){
-                strCont += '<div id="dblWrd' +'"><img class="dnmbrd" src="scrbimg/scrabbleDblWrdBox.jpg" alt="DoubleWordScore"></div>';
+                strCont += '<div id="dblWrd' + i +'"><img class="dnmbrd" src="scrbimg/scrabbleDblWrdBox.jpg" alt="DoubleWordScore"></div>';
             }
             if (i == 6 || i == 8){
-                strCont += '<div id="dblLtr' +'"><img class="dnmbrd" src="scrbimg/scrabbleDblLtrBox.jpg" alt="DoubleLetterScore"></div>';
+                strCont += '<div id="dblLtr' + i +'"><img class="dnmbrd" src="scrbimg/scrabbleDblLtrBox.jpg" alt="DoubleLetterScore"></div>';
             }
             else{
-                strCont += '<div id="blank' +'"><img class="dnmbrd" src="scrbimg/scrabbleBlankBox.jpg" alt="blank"></div>';
+                strCont += '<div id="blank' + i +'"><img class="dnmbrd" src="scrbimg/scrabbleBlankBox.jpg" alt="blank"></div>';
             }
+            console.log(strCont);
         }
     };
     /*create dragable feature*/
     document.getElementById("dnmbrd").innerHTML = strCont;
-    console.log("creating dropps");
     for (var i = 0; i < 15; i++){
         if (i == 2 || i == 12){
             /*creating the double word score*/
